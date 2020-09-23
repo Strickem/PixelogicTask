@@ -10,6 +10,7 @@ register a new account
     wait until page contains    Sign Up
     Input Text    xpath=//input[@name='firstname']  ${Firstname}
     input text    xpath=//input[@name='lastname']    ${Lastname}
+    should not be equal    ${Lastname}    ${Firstname}
     input text    xpath=//input[@name='phone']    ${Mobile}
     input text    xpath=//input[@name='email']    ${Email}
     should contain    ${Email}    @spam4.me

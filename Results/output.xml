@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.6.5 on win32)" generated="20200923 03:23:52.087" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.6.5 on win32)" generated="20200923 04:34:12.134" rpa="false">
 <suite id="s1" name="Phptravelsweb" source="D:\python projects\tests\phptravelsweb.robot">
 <test id="s1-t1" name="User Register a new account">
 <kw name="begin webtest" library="common" type="setup">
@@ -9,14 +9,14 @@
 <arg>about:blank</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20200923 03:23:52.307" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200923 03:23:52.307" endtime="20200923 03:23:54.486"></status>
+<msg timestamp="20200923 04:34:12.365" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200923 04:34:12.364" endtime="20200923 04:34:15.800"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200923 03:23:54.486" endtime="20200923 03:23:55.615"></status>
+<status status="PASS" starttime="20200923 04:34:15.800" endtime="20200923 04:34:16.920"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:23:52.306" endtime="20200923 03:23:55.615"></status>
+<status status="PASS" starttime="20200923 04:34:12.364" endtime="20200923 04:34:16.920"></status>
 </kw>
 <kw name="load" library="Register">
 <kw name="Go To" library="SeleniumLibrary">
@@ -24,10 +24,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20200923 03:23:55.616" level="INFO">Opening url 'https://www.phptravels.net/register'</msg>
-<status status="PASS" starttime="20200923 03:23:55.616" endtime="20200923 03:24:45.501"></status>
+<msg timestamp="20200923 04:34:16.922" level="INFO">Opening url 'https://www.phptravels.net/register'</msg>
+<status status="PASS" starttime="20200923 04:34:16.921" endtime="20200923 04:34:40.109"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:23:55.616" endtime="20200923 03:24:45.501"></status>
+<status status="PASS" starttime="20200923 04:34:16.921" endtime="20200923 04:34:40.109"></status>
 </kw>
 <kw name="register a new account" library="phptravels">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -35,7 +35,7 @@
 <arguments>
 <arg>Sign Up</arg>
 </arguments>
-<status status="PASS" starttime="20200923 03:24:45.502" endtime="20200923 03:24:45.524"></status>
+<status status="PASS" starttime="20200923 04:34:40.110" endtime="20200923 04:34:40.132"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -43,8 +43,8 @@
 <arg>xpath=//input[@name='firstname']</arg>
 <arg>${Firstname}</arg>
 </arguments>
-<msg timestamp="20200923 03:24:45.525" level="INFO">Typing text 'axem' into text field 'xpath=//input[@name='firstname']'.</msg>
-<status status="PASS" starttime="20200923 03:24:45.524" endtime="20200923 03:24:45.615"></status>
+<msg timestamp="20200923 04:34:40.133" level="INFO">Typing text 'axem' into text field 'xpath=//input[@name='firstname']'.</msg>
+<status status="PASS" starttime="20200923 04:34:40.133" endtime="20200923 04:34:40.231"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -52,88 +52,32 @@
 <arg>xpath=//input[@name='lastname']</arg>
 <arg>${Lastname}</arg>
 </arguments>
-<msg timestamp="20200923 03:24:45.617" level="INFO">Typing text 'maxes' into text field 'xpath=//input[@name='lastname']'.</msg>
-<status status="PASS" starttime="20200923 03:24:45.616" endtime="20200923 03:24:45.716"></status>
+<msg timestamp="20200923 04:34:40.231" level="INFO">Typing text 'axem' into text field 'xpath=//input[@name='lastname']'.</msg>
+<status status="PASS" starttime="20200923 04:34:40.231" endtime="20200923 04:34:40.322"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are equal.</doc>
 <arguments>
-<arg>xpath=//input[@name='phone']</arg>
-<arg>${Mobile}</arg>
+<arg>${Lastname}</arg>
+<arg>${Firstname}</arg>
 </arguments>
-<msg timestamp="20200923 03:24:45.716" level="INFO">Typing text '+202310420421' into text field 'xpath=//input[@name='phone']'.</msg>
-<status status="PASS" starttime="20200923 03:24:45.716" endtime="20200923 03:24:45.840"></status>
+<msg timestamp="20200923 04:34:40.323" level="FAIL">axem == axem</msg>
+<status status="FAIL" starttime="20200923 04:34:40.323" endtime="20200923 04:34:40.323"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//input[@name='email']</arg>
-<arg>${Email}</arg>
-</arguments>
-<msg timestamp="20200923 03:24:45.841" level="INFO">Typing text 'mopixel10@spam4.me' into text field 'xpath=//input[@name='email']'.</msg>
-<status status="PASS" starttime="20200923 03:24:45.840" endtime="20200923 03:24:45.958"></status>
-</kw>
-<kw name="Should Contain" library="BuiltIn">
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<arguments>
-<arg>${Email}</arg>
-<arg>@spam4.me</arg>
-</arguments>
-<status status="PASS" starttime="20200923 03:24:45.958" endtime="20200923 03:24:45.958"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//input[@name='password']</arg>
-<arg>${Password}</arg>
-</arguments>
-<msg timestamp="20200923 03:24:45.959" level="INFO">Typing text 'M_p1xel1' into text field 'xpath=//input[@name='password']'.</msg>
-<status status="PASS" starttime="20200923 03:24:45.958" endtime="20200923 03:24:46.049"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//input[@name='confirmpassword']</arg>
-<arg>${Password}</arg>
-</arguments>
-<msg timestamp="20200923 03:24:46.050" level="INFO">Typing text 'M_p1xel1' into text field 'xpath=//input[@name='confirmpassword']'.</msg>
-<status status="PASS" starttime="20200923 03:24:46.050" endtime="20200923 03:24:46.140"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//button[@type='submit']</arg>
-</arguments>
-<msg timestamp="20200923 03:24:46.140" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20200923 03:24:46.140" endtime="20200923 03:24:46.228"></status>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>My Profile</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200923 03:24:46.714" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200923 03:24:46.332" endtime="20200923 03:24:46.714"></status>
-</kw>
-<msg timestamp="20200923 03:24:46.717" level="FAIL">Page should have contained text 'My Profile' but did not.</msg>
-<status status="FAIL" starttime="20200923 03:24:46.228" endtime="20200923 03:24:46.717"></status>
-</kw>
-<status status="FAIL" starttime="20200923 03:24:45.501" endtime="20200923 03:24:46.717"></status>
+<status status="FAIL" starttime="20200923 04:34:40.110" endtime="20200923 04:34:40.323"></status>
 </kw>
 <kw name="end webtest" library="common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200923 03:24:46.718" endtime="20200923 03:24:48.855"></status>
+<status status="PASS" starttime="20200923 04:34:40.325" endtime="20200923 04:34:42.462"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:24:46.718" endtime="20200923 03:24:48.855"></status>
+<status status="PASS" starttime="20200923 04:34:40.324" endtime="20200923 04:34:42.463"></status>
 </kw>
 <doc>user use the information available</doc>
 <tags>
 <tag>smoke</tag>
 </tags>
-<status status="FAIL" starttime="20200923 03:23:52.305" endtime="20200923 03:24:48.856" critical="yes">Page should have contained text 'My Profile' but did not.</status>
+<status status="FAIL" starttime="20200923 04:34:12.363" endtime="20200923 04:34:42.464" critical="yes">axem == axem</status>
 </test>
 <test id="s1-t2" name="User login using his correct credentials">
 <kw name="begin webtest" library="common" type="setup">
@@ -143,14 +87,14 @@
 <arg>about:blank</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20200923 03:24:48.863" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200923 03:24:48.862" endtime="20200923 03:24:51.013"></status>
+<msg timestamp="20200923 04:34:42.473" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200923 04:34:42.473" endtime="20200923 04:34:44.643"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200923 03:24:51.013" endtime="20200923 03:24:52.130"></status>
+<status status="PASS" starttime="20200923 04:34:44.643" endtime="20200923 04:34:50.665"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:24:48.861" endtime="20200923 03:24:52.130"></status>
+<status status="PASS" starttime="20200923 04:34:42.472" endtime="20200923 04:34:50.665"></status>
 </kw>
 <kw name="load" library="login">
 <kw name="Go To" library="SeleniumLibrary">
@@ -158,75 +102,57 @@
 <arguments>
 <arg>${Login_URL}</arg>
 </arguments>
-<msg timestamp="20200923 03:24:52.132" level="INFO">Opening url 'https://www.phptravels.net/login'</msg>
-<status status="PASS" starttime="20200923 03:24:52.131" endtime="20200923 03:25:16.983"></status>
+<msg timestamp="20200923 04:34:50.669" level="INFO">Opening url 'https://www.phptravels.net/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200923 04:34:58.702" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+</msg>
+<status status="FAIL" starttime="20200923 04:34:54.683" endtime="20200923 04:34:58.702"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:24:52.131" endtime="20200923 03:25:16.983"></status>
+<msg timestamp="20200923 04:34:58.702" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+</msg>
+<msg timestamp="20200923 04:34:58.706" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+</msg>
+<status status="FAIL" starttime="20200923 04:34:50.668" endtime="20200923 04:34:58.706"></status>
 </kw>
-<kw name="User logs into the website" library="phptravels">
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//input[@name='username']</arg>
-<arg>${Email}</arg>
-</arguments>
-<msg timestamp="20200923 03:25:16.985" level="INFO">Typing text 'mopixel10@spam4.me' into text field 'xpath=//input[@name='username']'.</msg>
-<status status="PASS" starttime="20200923 03:25:16.985" endtime="20200923 03:25:17.091"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//input[@name='password']</arg>
-<arg>${Password}</arg>
-</arguments>
-<msg timestamp="20200923 03:25:17.092" level="INFO">Typing text 'M_p1xel1' into text field 'xpath=//input[@name='password']'.</msg>
-<status status="PASS" starttime="20200923 03:25:17.091" endtime="20200923 03:25:17.195"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//button[text()='Login']</arg>
-</arguments>
-<msg timestamp="20200923 03:25:17.195" level="INFO">Clicking button 'xpath=//button[text()='Login']'.</msg>
-<status status="PASS" starttime="20200923 03:25:17.195" endtime="20200923 03:25:17.273"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>My Profile</arg>
-</arguments>
-<status status="PASS" starttime="20200923 03:25:17.273" endtime="20200923 03:25:20.549"></status>
-</kw>
-<status status="PASS" starttime="20200923 03:25:16.984" endtime="20200923 03:25:20.550"></status>
+<status status="FAIL" starttime="20200923 04:34:50.667" endtime="20200923 04:34:58.706"></status>
 </kw>
 <kw name="end webtest" library="common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200923 03:25:20.551" endtime="20200923 03:25:22.670"></status>
+<status status="PASS" starttime="20200923 04:34:58.707" endtime="20200923 04:35:00.741"></status>
 </kw>
-<status status="PASS" starttime="20200923 03:25:20.550" endtime="20200923 03:25:22.670"></status>
+<status status="PASS" starttime="20200923 04:34:58.707" endtime="20200923 04:35:00.741"></status>
 </kw>
 <doc>user use the information available</doc>
 <tags>
 <tag>smoke</tag>
 </tags>
-<status status="PASS" starttime="20200923 03:24:48.860" endtime="20200923 03:25:22.670" critical="yes"></status>
+<status status="FAIL" starttime="20200923 04:34:42.471" endtime="20200923 04:35:00.743" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+</status>
 </test>
 <doc>some basic info about the tests</doc>
-<status status="FAIL" starttime="20200923 03:23:52.089" endtime="20200923 03:25:22.672"></status>
+<status status="FAIL" starttime="20200923 04:34:12.137" endtime="20200923 04:35:00.757"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1">smoke</stat>
+<stat pass="0" fail="2">smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="Phptravelsweb">Phptravelsweb</stat>
+<stat pass="0" fail="2" id="s1" name="Phptravelsweb">Phptravelsweb</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20200923 04:34:58.702" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+</msg>
 </errors>
 </robot>
