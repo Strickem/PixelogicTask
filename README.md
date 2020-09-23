@@ -49,7 +49,9 @@ Run the command from Pycharm IDE Terminal
 Command: robot --variable Email:pxlogic1@spam4.me -d results tests/phptravelsweb.robot
 
 P.S: please note that I'm passing the variable email in the cmd terminal when i'm runnging the script as i didn't want to hardcode it and wanted to be up to the user running the script
-the other values are not needed as i already specified values for them
+
+the other values are not needed as i already specified values for them and they are not unique unlike the EMAIL Field.
 
 -why is that?
+
 = because the only field that can't accept the same data twice is the Email field during registeration.
